@@ -1,0 +1,20 @@
+services:
+  poc-app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Optional: pre-seed the tenant/client so nothing has to be typed on the page.
+      # Anything set here can still be changed live in the on-page config panel.
+      AIC_TENANT_URL: ""        # e.g. https://openam-yourtenant.forgeblocks.com
+      AIC_REALM: "alpha"
+      AIC_CLIENT_ID: ""
+      # AIC_SCOPES: "openid profile email address phone fr:idm:* fr:idc:analytics:*"
+      APP_THEME: "regional"     # bank | regional
+      APP_LANG: "es"            # es | en
+      # ADMIN_TOKEN: "change-me"   # enables "Publish as default for all users" in the config panel
+      # PROXY_ALLOWED_HOSTS: "*.forgeblocks.com,login.mybank.example"
+    volumes:
+      - poc-data:/app/data   # persists published defaults (data/config.json)
+volumes:
+  poc-data:

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banca digital · OAuth2 POC</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a8a4a'/%3E%3Cpath d='M9 22c0-8 5-12 14-12 0 8-4 13-12 13' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-theme="regional">
+
+<!-- ============ THEME 1: generic bank ============ -->
+<div id="site-bank" class="site">
+  <header class="b-header">
+    <div class="wrap b-header-in">
+      <a class="b-logo" href="#/" data-logo>
+        <svg width="30" height="30" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M8 23V10l8 8 8-8v13" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <span>Meridian<b>Bank</b></span>
+      </a>
+      <nav class="b-nav"><a data-i18n="b_f1">Cuentas</a><a data-i18n="b_f2">Tarjetas</a><a data-i18n="b_f3">Préstamos</a><a data-i18n="b_f4">Ahorro</a></nav>
+      <div class="auth-slot"></div>
+    </div>
+  </header>
+  <div class="site-body">
+    <section class="b-hero">
+      <div class="wrap b-hero-in">
+        <div>
+          <span class="b-pill" data-i18n="b_tag">Banca digital</span>
+          <h1 data-i18n="b_h1">Tu banco, sin complicaciones.</h1>
+          <p data-i18n="b_p"></p>
+          <div class="b-cta"><button class="btn btn-primary btn-lg" data-action="login" data-i18n="login">Accede</button><a class="btn btn-ghost btn-lg" data-i18n="b_cta2">Descubre más</a></div>
+          <p class="b-secure">🔒 <span data-i18n="b_secure"></span></p>
+        </div>
+        <div class="b-art" aria-hidden="true">
+          <div class="b-card-art c1"><i></i><span>•••• 4821</span></div>
+          <div class="b-card-art c2"><i></i><span>•••• 9034</span></div>
+          <div class="b-chart"><svg viewBox="0 0 200 80"><polyline fill="none" stroke="currentColor" stroke-width="3" points="0,65 30,55 60,60 90,35 120,42 150,20 200,8"/></svg></div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap b-features">
+      <article><div class="ico">◎</div><h3 data-i18n="b_f1"></h3><p data-i18n="b_f1p"></p></article>
+      <article><div class="ico">▭</div><h3 data-i18n="b_f2"></h3><p data-i18n="b_f2p"></p></article>
+      <article><div class="ico">◈</div><h3 data-i18n="b_f3"></h3><p data-i18n="b_f3p"></p></article>
+      <article><div class="ico">↗</div><h3 data-i18n="b_f4"></h3><p data-i18n="b_f4p"></p></article>
+    </section>
+    <section class="b-stats"><div class="wrap">
+      <div><b>2.4M</b><span data-i18n="b_s1"></span></div><div><b>99.99%</b><span data-i18n="b_s2"></span></div><div><b>1,200+</b><span data-i18n="b_s3"></span></div>
+    </div></section>
+    <footer class="b-footer"><div class="wrap">© Meridian Bank · Demo</div></footer>
+  </div>
+</div>
+
+<!-- ============ THEME 2: regional cooperative bank ============ -->
+<div id="site-regional" class="site">
+  <div class="r-util"><div class="wrap r-util-in">
+    <div class="r-segments"><a class="on" data-i18n="r_util1">Particulares</a><a data-i18n="r_util2">Empresas</a><a data-i18n="r_util3">Agroalimentario</a><a data-i18n="r_util4">Banca privada</a></div>
+    <div class="r-tools"><a data-i18n="r_search">Buscar</a><a data-i18n="r_offices">Oficinas</a><a data-i18n="r_contact">Contacto</a><a>ES ▾</a></div>
+  </div></div>
+  <header class="r-header">
+    <div class="wrap r-header-in">
+      <a class="r-logo" href="#/" data-logo>
+        <svg width="38" height="38" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="currentColor"/><path d="M11 27c0-10 6-15 18-15 0 10-5 16-15 16" fill="#fff"/><path d="M13 27c4-5 8-8 13-11" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        <span>Caja <b>Vega Verde</b></span>
+      </a>
+      <nav class="r-nav"><a data-i18n="r_n1"></a><a data-i18n="r_n2"></a><a data-i18n="r_n3"></a><a data-i18n="r_n4"></a><a data-i18n="r_n5"></a><a data-i18n="r_n6"></a></nav>
+      <div class="auth-slot"></div>
+    </div>
+  </header>
+  <div class="site-body">
+    <section class="r-hero">
+      <div class="wrap r-hero-in">
+        <div class="r-hero-copy">
+          <h1 data-i18n="r_h1">Crecemos contigo, cerca de ti.</h1>
+          <p data-i18n="r_p"></p>
+          <div class="r-cta"><a class="btn btn-white" data-i18n="r_cta1"></a><a class="btn btn-outline-w" data-i18n="r_cta2"></a></div>
+          <div class="r-dots"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+        <aside class="r-login-card">
+          <div class="r-lock">🔒</div>
+          <h3 data-i18n="r_card_t"></h3>
+          <p data-i18n="r_card_p"></p>
+          <button class="btn btn-primary btn-block" data-action="login" data-i18n="login">Accede</button>
+        </aside>
+      </div>
+    </section>
+    <section class="wrap r-quick">
+      <a><i>⌂</i><span data-i18n="r_q1"></span></a><a><i>◷</i><span data-i18n="r_q2"></span></a><a><i>⌖</i><span data-i18n="r_q3"></span></a>
+      <a><i>☎</i><span data-i18n="r_q4"></span></a><a><i>☂</i><span data-i18n="r_q5"></span></a><a><i>?</i><span data-i18n="r_q6"></span></a>
+    </section>
+    <section class="wrap r-products">
+      <h2 data-i18n="r_sec1"></h2>
+      <div class="r-cards">
+        <article><div class="r-img i1"></div><h3 data-i18n="r_p1"></h3><p data-i18n="r_p1p"></p><a class="r-link" data-i18n="r_more"></a></article>
+        <article><div class="r-img i2"></div><h3 data-i18n="r_p2"></h3><p data-i18n="r_p2p"></p><a class="r-link" data-i18n="r_more"></a></article>
+        <article><div class="r-img i3"></div><h3 data-i18n="r_p3"></h3><p data-i18n="r_p3p"></p><a class="r-link" data-i18n="r_more"></a></article>
+      </div>
+    </section>
+    <section class="r-news"><div class="wrap">
+      <h2 data-i18n="r_news"></h2>
+      <ul><li><time>12 SEP</time><span data-i18n="r_news1"></span></li><li><time>05 SEP</time><span data-i18n="r_news2"></span></li><li><time>28 AGO</time><span data-i18n="r_news3"></span></li></ul>
+    </div></section>
+    <footer class="r-footer"><div class="wrap"><p>© Caja Vega Verde</p><p class="small" data-i18n="r_footer"></p></div></footer>
+  </div>
+</div>
+
+<!-- ============ Logged-in application ============ -->
+<main id="app" class="wrap" hidden></main>
+
+<!-- ============ Hidden POC controls ============ -->
+<button id="poc-dot" title="POC controls (Alt+Shift+C)" aria-label="POC controls"></button>
+<aside id="drawer" hidden></aside>
+<section id="inspector" hidden></section>
+<div id="toast" role="status"></div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

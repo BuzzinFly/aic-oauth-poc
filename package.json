@@ -1,0 +1,12 @@
+{
+  "name": "aic-oauth-poc",
+  "version": "1.0.0",
+  "description": "OAuth2 (Authorization Code + PKCE) client demo app for PingOne Advanced Identity Cloud",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED"
+}
