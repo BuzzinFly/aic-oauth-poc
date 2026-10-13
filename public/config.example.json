@@ -1,0 +1,20 @@
+{
+  "tenantUrl": "https://your-tenant.forgeblocks.com",
+  "realm": "alpha",
+  "clientId": "your-client-id",
+  "scopes": "openid profile email address phone",
+  "redirectUri": "http://localhost:3000/callback",
+  "postLogoutUri": "http://localhost:3000",
+  "journey": "SignUp",
+  "trustJourney": "Baseline-UpdateTrustedDevice",
+  "acrValues": "",
+  "prompt": "",
+  "singleLogout": true,
+  "useProxy": false,
+  "apiAuth": "both",
+  "scopeGating": true,
+  "showInspectorTab": true,
+  "theme": "regional",
+  "lang": "es",
+  "cardScopes": "{\"profile\": \"profile\", \"session\": \"openid\", \"apps\": \"fr:idm:*\", \"devices\": \"fr:idm:*\", \"deviceProfile\": \"fr:idm:*\", \"activity\": \"fr:idm:*\", \"idm\": \"fr:idm:*\"}"
+}
